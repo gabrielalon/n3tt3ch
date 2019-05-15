@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace App\UI\Http\Web\Controller;
 
+use App\Infrastructure\User\Auth\Auth;
 use League\Tactician\CommandBus;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Security\Core\Security;
 
 class AbstractRenderController
 {
@@ -30,12 +32,21 @@ class AbstractRenderController
     {
         return $this->queryBus->handle($query);
     }
+	
+	/**
+	 * @return \Symfony\Component\Security\Core\User\UserInterface|null
+	 */
+    protected function user(): Auth
+	{
+		return $this->security->getUser();
+	}
 
-    public function __construct(\Twig_Environment $template, CommandBus $commandBus, CommandBus $queryBus)
+    public function __construct(\Twig_Environment $template, CommandBus $commandBus, CommandBus $queryBus, Security $security)
     {
         $this->template = $template;
         $this->commandBus = $commandBus;
         $this->queryBus = $queryBus;
+        $this->security = $security;
     }
 
     /**
@@ -52,4 +63,7 @@ class AbstractRenderController
      * @var \Twig_Environment
      */
     private $template;
+    
+    /** @var Security */
+    private $security;
 }
