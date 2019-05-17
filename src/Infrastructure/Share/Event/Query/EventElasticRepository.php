@@ -20,7 +20,8 @@ final class EventElasticRepository extends ElasticRepository implements EventRep
             'occurred_on' => $message->getRecordedOn()->toString(),
         ];
 
-        $this->add($document);
+        file_put_contents(__DIR__ . DIRECTORY_SEPARATOR . 'events.log',
+			print_r($document, true), FILE_APPEND);
     }
 
     public function __construct(array $elasticConfig)

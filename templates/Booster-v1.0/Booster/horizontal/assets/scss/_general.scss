@@ -1,0 +1,89 @@
+/* 
+===============
+    General
+===============
+*/
+
+html {
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100%;
+  background: $bg-body;
+}
+body {
+  background: $bg-body;
+  font-family: $font-primary;
+  margin: 0;
+  font-size: $base-font;
+  color: $muted;
+}
+b {
+  font-weight: 600;
+}
+strong {
+  font-weight: 600;
+}
+p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+label {
+    vertical-align: middle;
+}
+* {
+  outline: none !important;
+}
+a {
+  color: $primary;
+  &:hover {
+    color: darken($primary, 5%);
+    outline: 0;
+    text-decoration: none;
+  }
+  &:active {
+    color: darken($primary, 5%);
+    outline: 0;
+    text-decoration: none;
+  }
+  &:focus {
+    color: darken($primary, 5%);
+    outline: 0;
+    text-decoration: none;
+  }
+}
+code {
+  color: $primary;
+}
+
+.xp-small-logo {
+  display: none;
+}
+.xp-rightbar {
+  overflow: hidden;
+  min-height: 500px;
+  transition: all 0.3s ease;
+}
+.xp-headerbar {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1030;
+}
+.xp-contentbar {
+    padding: 245px 30px 30px 30px;
+    margin-bottom: 30px;
+}
+.xp-footerbar {
+    position: absolute;
+    bottom: 0;    
+    right: 0;
+    left: 0;
+    background-color: #353b48;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 30px;
+}
+.xp-toggle-menu .xp-footerbar {
+    left: 0;
+}

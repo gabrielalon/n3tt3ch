@@ -1,0 +1,92 @@
+/* 
+==================
+    Responsive
+==================
+*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    overflow-x: hidden;
+  }  
+}
+
+@media (max-width: 991px) {
+  .xp-horizontal-menu-toggle {
+      display: inline-block;
+  }
+  .xp-menubar {
+    margin: 0 30px 0 30px;
+  }
+  .xp-breadcrumbbar {
+      padding: 15px 30px 15px;
+  }
+  .xp-contentbar {
+      padding: 190px 30px 30px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .xp-rightbar {
+    margin-left: 0;
+  }  
+}
+
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+  .xp-toggle-menu .xp-leftbar {
+     position:fixed;
+     left: 0px;
+  }
+  .xp-rightbar {
+    margin-left: 0 !important;
+  }
+  .xp-menubar {
+      text-align: right;
+  }
+  .xp-searchbar {
+    margin-top:20px;
+  }
+  .xp-contentbar {
+      padding: 245px 30px 30px 30px;
+  }
+  .xp-footerbar {
+      left: 0;
+  }  
+  .xp-email-rightbar {
+    .email-open-box {
+      .open-email-head {
+        ul {
+          text-align: left;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .xp-main-logo {
+    display: none;
+  }
+  .xp-small-logo {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+
+}
+
+@media (max-width: 480px) {
+
+}
+@media (max-width: 445px) {
+  .xp-contentbar {
+      padding: 245px 30px 55px 30px;
+  }
+}
+@media (max-width: 420px) {
+
+}
